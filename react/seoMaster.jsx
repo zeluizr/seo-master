@@ -1,12 +1,18 @@
+import { useRuntime } from "vtex.render-runtime";
 import "./global.css";
-const seoMaster = ({ targetContent }) => {
+
+const seoMaster = ({ targetContent, routerContent }) => {
+  const { route } = useRuntime();
+
   return (
     <>
-      {targetContent && (
-        <div
-          className="mt7 content-html"
-          dangerouslySetInnerHTML={{ __html: targetContent }}
-        />
+      {route.path === routerContent && (
+        <>
+          <div
+            className="mt7 content-html"
+            dangerouslySetInnerHTML={{ __html: targetContent }}
+          />
+        </>
       )}
     </>
   );
@@ -20,6 +26,12 @@ seoMaster.schema = {
     targetContent: {
       title: "SEO Content",
       description: "SEO",
+      type: "string",
+      default: null,
+    },
+    routerContent: {
+      title: "Pagina de destino",
+      description: "Pagina de destino",
       type: "string",
       default: null,
     },
