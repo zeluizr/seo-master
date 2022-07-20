@@ -1,7 +1,7 @@
 {
   "vendor": "tiendatest3",
   "name": "seo-master",
-  "version": "0.0.3",
+  "version": "0.0.10",
   "builders": {
     "react": "3.x",
     "store": "0.x"
