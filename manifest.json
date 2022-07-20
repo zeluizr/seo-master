@@ -1,7 +1,7 @@
 {
-  "vendor": "tiendatest3",
+  "vendor": "killstorecl",
   "name": "seo-master",
-  "version": "0.0.11",
+  "version": "0.0.3",
   "builders": {
     "react": "3.x",
     "store": "0.x"
